@@ -128,3 +128,39 @@ figure {
   padding: 20px 0;
   text-align: center;
 }
+
+.content__card {
+  position: relative;
+  right: 5vi;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% + 10vi);
+  margin-top: 7%;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  aspect-ratio: 4 / 3;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.colored-text {
+  position: relative;
+}
+
+.colored-text::after {
+  content: ' ';
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: 0.3em;
+  background-color: var(--accent-color);
+}
+
+.content__card-subtitle {
+  text-align: center;
+}
