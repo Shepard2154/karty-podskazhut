@@ -72,6 +72,21 @@ figure {
   cursor: pointer;
 }
 
+button:hover,
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+button[disabled] {
+  pointer-events: none;
+}
+
 .header__theme-button_is-active {
   position: relative;
 }
@@ -200,5 +215,15 @@ figure {
 }
 
 .content__card-subtitle {
+  text-align: center;
+}
+
+.footer {
+  margin-top: 10%;
+  border-top: 1px solid currentColor;
+}
+
+.footer__copyright {
+  padding: 2.5%;
   text-align: center;
 }
