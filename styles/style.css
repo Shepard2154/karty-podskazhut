@@ -17,7 +17,7 @@ figure {
 }
 
 :root {
-  --bg-color: #f5f5f5;
+  --bg-color: #f3efec;
   --text-color: #312a4e;
   --accent-color: #ffab6b;
   --main-font: 'Raleway';
@@ -26,6 +26,7 @@ figure {
 
 .page {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--main-font, sans-serif);
   background-color: var(--bg-color);
   min-inline-size: 360px;
@@ -109,4 +110,21 @@ figure {
 
 .content__list-item:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.content__figure {
+  position: relative;
+  right: 5vi;
+  width: calc(100% + 10vi);
+  margin: 7% 0;
+}
+
+.content__picture-image {
+  width: 100%;
+}
+
+.content__picture-caption {
+  border-bottom: 1px solid currentColor;
+  padding: 20px 0;
+  text-align: center;
 }
