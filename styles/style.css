@@ -68,6 +68,37 @@ figure {
 .content__paragraph {
 }
 
+.content__blockquote {
+  width: 75%;
+  margin: 0 auto 1.5em;
+  font-style: italic;
+  line-height: 200%;
+}
+
 .paragraph__link {
   color: currentColor;
+}
+
+.content__list {
+  padding-inline-start: 40px;
+  list-style: none;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item::before {
+  content: ' ';
+  position: absolute;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 10px;
 }
