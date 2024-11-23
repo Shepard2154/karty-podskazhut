@@ -65,6 +65,14 @@ figure {
   margin-bottom: 1.5em;
 }
 
+.content__text-block_type_first-lettered::first-letter {
+  display: inline-block;
+  margin-right: 1px;
+  padding: 0 4px;
+  font-weight: bold;
+  background-color: var(--accent-color);
+}
+
 .content__paragraph {
 }
 
