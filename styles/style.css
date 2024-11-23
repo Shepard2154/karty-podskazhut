@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.page {
-  min-inline-size: 360px;
-  margin: 0;
-}
-
 p,
 h1,
 h2,
@@ -25,6 +20,54 @@ figure {
   --bg-color: #f5f5f5;
   --text-color: #312a4e;
   --accent-color: #ffab6b;
-  --main-font: "Raleway", sans-serif;
-  --accent-font: "STIX Two Text", serif;
+  --main-font: 'Raleway';
+  --accent-font: 'STIX Two Text';
+}
+
+.page {
+  margin: 0;
+  font-family: var(--main-font, sans-serif);
+  background-color: var(--bg-color);
+  min-inline-size: 360px;
+}
+
+.header {
+  padding-top: 10%;
+}
+
+.heading {
+  font-family: var(--accent-font, serif);
+  /* font-size: 30px; */
+  line-height: 90%;
+  text-align: center;
+}
+
+.header__title {
+  margin-bottom: 40px;
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
+.content-section {
+  padding: 0 5vi;
+}
+
+.content__title {
+  margin-top: 7%;
+  margin-bottom: 2.5%;
+  font-size: 30px;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.content__paragraph {
+}
+
+.paragraph__link {
+  color: currentColor;
 }
