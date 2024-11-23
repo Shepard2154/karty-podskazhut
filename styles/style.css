@@ -97,6 +97,7 @@ button[disabled] {
 .header__theme-button_is-active {
   position: relative;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .header__theme-button_is-active::after {
@@ -219,6 +220,7 @@ button[disabled] {
 
 .colored-text {
   position: relative;
+  white-space: nowrap;
 }
 
 .colored-text::after {
