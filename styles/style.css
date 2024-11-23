@@ -26,9 +26,16 @@ figure {
 
 .page {
   margin: 0;
+  color: var(--text-color);
   font-family: var(--main-font, sans-serif);
   background-color: var(--bg-color);
   min-inline-size: 360px;
+}
+
+.theme_dark {
+  --bg-color: #000;
+  --text-color: #b3b3b3;
+  --accent-color: transparent;
 }
 
 .header {
@@ -89,6 +96,7 @@ button[disabled] {
 
 .header__theme-button_is-active {
   position: relative;
+  font-weight: bold;
 }
 
 .header__theme-button_is-active::after {
@@ -100,6 +108,10 @@ button[disabled] {
   width: calc(100% + 2px);
   height: 0.3em;
   background-color: var(--accent-color);
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url(../images/pattern.svg);
 }
 
 .content-section {
@@ -128,6 +140,10 @@ button[disabled] {
   background-color: var(--accent-color);
 }
 
+.theme_dark .content__text-block_type_first-lettered::first-letter {
+  border: 1px solid currentColor;
+}
+
 .content__blockquote {
   width: 75%;
   margin: 0 auto 1.5em;
@@ -137,6 +153,7 @@ button[disabled] {
 
 .paragraph__link {
   color: currentColor;
+  text-decoration-skip-ink: none;
 }
 
 .content__list {
@@ -157,6 +174,10 @@ button[disabled] {
   background-image: url(../images/marker-light.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.theme_dark .content__list-item::before {
+  background-image: url(../images/marker-dark.svg);
 }
 
 .content__list-item:not(:last-child) {
@@ -183,15 +204,11 @@ button[disabled] {
 }
 
 .content__card {
-  position: relative;
-  right: 5vi;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: calc(100% + 10vi);
   margin-top: 7%;
-  border-top: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
+  border: 1px solid currentColor;
   aspect-ratio: 4 / 3;
 }
 
@@ -212,6 +229,10 @@ button[disabled] {
   width: calc(100% + 4px);
   height: 0.3em;
   background-color: var(--accent-color);
+}
+
+.theme_dark .colored-text::after {
+  background-image: url(../images/pattern.svg);
 }
 
 .content__card-subtitle {
