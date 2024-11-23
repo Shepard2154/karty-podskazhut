@@ -14,7 +14,29 @@
 
   <body class="page theme_dark">
     <header class="header">
-      <h1 class="heading .content-section header__title">Карты подскажут</h1>
+      <h1 class="heading content-section header__title">Карты подскажут</h1>
+      <nav class="header__menu content-section">
+        <div class="header__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+            <use href="./images/logo.svg#logo"></use>
+          </svg>
+        </div>
+        <ul class="header__theme-toggler">
+          <li>
+            <button class="header__theme-button header__theme-button_type_dark">
+              Темная
+            </button>
+          </li>
+          <li>
+            <button
+              class="header__theme-button header__theme-button_type_light header__theme-button_is-active"
+              disabled
+            >
+              Светлая
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="content content-section">
       <h2 class="heading content__title">
@@ -45,19 +67,12 @@
         </p>
         <figure class="content__figure">
           <picture class="content__picture">
-            <source
-              srcset="images/cards-1x.avif 1x
-                      images/cards-2x.avif 2x"
-            />
-            <source
-              srcset="images/cards-1x.webp 1x
-                      images/cards-2x.webp 2x"
-            />
+            <source srcset="images/cards-1x.avif 1x, images/cards-2x.avif 2x" />
+            <source srcset="images/cards-1x.webp 1x, images/cards-2x.webp 2x" />
             <img
               class="content__picture-image"
               src="images/cards-1x.png"
-              srcset="images/cards-1x.png 1x
-                      images/cards-2x.png 2x"
+              srcset="images/cards-1x.png 1x, images/cards-2x.png 2x"
               alt="На деревянном столе без порядка находятся IPhone, ручка и цветок в горшке."
               loading="lazy"
             />
